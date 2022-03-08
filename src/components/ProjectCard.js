@@ -1,4 +1,12 @@
+import { useContext } from "react"
+import { ThemeContext } from "../context/theme.context";
+import { AuthContext } from './../context/auth.context';
+
 function ProjectCard(props) {
+
+  const { loggedInUser } = useContext(AuthContext)
+  const { theme } = useContext(ThemeContext)
+
   return (
     <div className="ProjectCard">
       <h3>{props.project.name}</h3>
